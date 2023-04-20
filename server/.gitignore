@@ -39,3 +39,4 @@ bundle.js.map
 npm-debug.log
 
 /config.env
+.config.env
