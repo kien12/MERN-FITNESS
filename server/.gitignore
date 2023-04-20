@@ -29,6 +29,8 @@
 /config/credentials.yml.enc
 config/master.key
 
+config.env
+
 node_modules/
 bundle.js
 bundle.js.map
