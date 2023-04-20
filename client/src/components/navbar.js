@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 export const Navbar = () => {
   const [cookies, setCookies] = useCookies(["access_token"]);
@@ -8,7 +9,7 @@ export const Navbar = () => {
 
  const logout = () => {
   setCookies("access_token", "");
-  window.localStorage.removeItem("userID");
+  window.localStorage.clear();
   navigate("/auth")
  }
 
