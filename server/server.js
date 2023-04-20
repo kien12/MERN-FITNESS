@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import { userRouter } from "./src/routes/api/users.js";
+import { recipesRouter } from "./src/routes/api/recipes.js";
 
 /* CONFIGURATIONS */
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/auth", userRouter);
+app.use("/recipes", recipesRouter);
 
 // MONGOOSE SETUP
 
