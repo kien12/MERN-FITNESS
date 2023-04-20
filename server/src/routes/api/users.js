@@ -1,18 +1,18 @@
-const express = require("express");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
-const UserModel = require("../../models/Users.js");
+import express from "express";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
+import { UserModel } from "../../models/Users.js";
 
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
-  const {username, password } = req.body;
+  const { username, password } = req.body;
 
-  const user = await UserModel.findOne({ username });
+  const user = await UserModel.findOne({username});
 
   res.json(user);
-});
+})
 
-router.post("/login");
+router.post("/login")
 
-module.exports = router;
+export {router as userRouter };
