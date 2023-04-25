@@ -1,3 +1,8 @@
 export const CreateRecipe = () => {
-  return <div> Home </div>
+  console.log(data)
+  return ( 
+    <div className="create-recipe">
+       <h2>create recipe</h2>
+    </div>
+  ) 
 }
